@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Caesar Cipher Encoder/Decoder</title>
+  <style>
+    :root {
+      --primary-color: #3f2c50;
+      --secondary-color: #7f34db;
+      --background-color: #eeecf1;
+      --form-background: #ffffff;
+      --button-text: #ffffff;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--primary-color);
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 2rem auto;
+      line-height: 1.5;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      background: var(--form-background);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 1rem;
+      border: 2px solid var(--secondary-color);
+      border-radius: 4px;
+      padding: 0.5rem;
+      resize: vertical;
+      font-size: 1rem;
+    }
+
+    .controls {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .controls label {
+      margin-right: 1rem;
+      font-weight: normal;
+    }
+
+    input[type="number"] {
+      width: 4rem;
+      padding: 0.3rem;
+      border: 2px solid var(--secondary-color);
+      border-radius: 4px;
+      margin: 0 1rem 0 0.5rem;
+      font-size: 1rem;
+    }
+
+    input[type="radio"] {
+      margin-left: 1rem;
+      margin-right: 0.3rem;
+    }
+
+    button {
+      background-color: var(--secondary-color);
+      color: var(--button-text);
+      border: none;
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #output {
+      white-space: pre-wrap;
+      background: var(--form-background);
+      padding: 1rem;
+      border: 2px solid var(--secondary-color);
+      border-radius: 4px;
+      min-height: 3rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Caesar Cipher</h1>
+  <form id="cipher-form">
+    <label for="message">Message:</label>
+    <textarea id="message" placeholder="Enter plain text or cipher text"></textarea>
+
+    <div class="controls">
+      <label for="key">Key (shift):</label>
+      <input type="number" id="key" min="0" value="3" />
+
+      <label>
+        <input type="radio" name="mode" value="encode" checked />
+        Encode
+      </label>
+      <label>
+        <input type="radio" name="mode" value="decode" />
+        Decode
+      </label>
+    </div>
+
+    <button type="submit">Go</button>
+  </form>
+
+  <h2>Result</h2>
+  <div id="output"></div>
+  <script src="decode.js"></script>
+</body>
+</html>
