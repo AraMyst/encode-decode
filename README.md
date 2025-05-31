@@ -2,7 +2,7 @@
 
 Encode or decode secret messages with the **classical Caesar cipher** right in your browser. Choose any shift key, hit **Go**, and watch the text transform instantly—no page reloads, no server‑side processing.
 
-> **Live demo →** [*Add your GitHub Pages link here once deployed*](https://aramyst.github.io/encode-decode/)
+> **Live demo →** https://aramyst.github.io/encode-decode/
 
 ---
 
